@@ -29,7 +29,7 @@ try:
     welcome_text = welcome_text_elt.text
 
     # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
-    assert "Congratulations! You have successfully registered!" == welcome_text
+    assert "Congratulations! You have successfully registered!" == welcome_text, "New customer is not registered or recheck successful message"
 
 finally:
     time.sleep(10)
