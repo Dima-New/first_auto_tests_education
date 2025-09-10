@@ -1,8 +1,8 @@
+import math
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import time
-import math
-import pytest
 
 
 def calc(x):
@@ -14,6 +14,7 @@ browser = webdriver.Chrome()
 
 try:
     browser.get(link)
+    browser.implicitly_wait(5)
     browser.find_element(By.CSS_SELECTOR, "button.btn").click()
     new_winow = browser.window_handles[1]
     browser.switch_to.window(new_winow)
